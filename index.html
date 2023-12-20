@@ -1,106 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>漂亮的网页首页</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f7f7f7;
-            background: linear-gradient(135deg, #f7f7ff 30%, #e2e2e2 100%);
-        }
-        .container {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            text-align: center;
-            background: white;
-            border-radius: 8px;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-        }
-        nav {
-            padding: 10px 0;
-            background: #444;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ddd;
-        }
-        .hero {
-            padding: 50px 20px;
-            background: url('your-image.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-        }
-        .content {
-            padding: 20px;
-            text-align: left;
-        }
-        footer {
-            background: #333;
-            color: white;
-            padding: 10px 0;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 5px;
-            color: white;
-            background-color: #007bff;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Image Display</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>我的网站</h1>
-        </header>
-        <nav>
-            <a href="#">首页</a>
-            <a href="#">关于我们</a>
-            <a href="#">服务</a>
-            <a href="#">联系方式</a>
-        </nav>
-        <section class="hero">
-            <h2>欢迎来到我的网站</h2>
-            <p>这是一个漂亮的网页首页样例。</p>
-            <a href="#" class="button">了解更多</a>
-        </section>
-        <div class="content">
-            <h3>标题</h3>
-            <p>这里是内容区域。你可以添加一些介绍性的文字或者其它你想展示的内容。</p>
-        </div>
-        <footer>
-            <p>版权所有 &copy; 2023 我的网站</p>
-        </footer>
-    </div>
+    <h1>Today's Image</h1>
+    <img src="today.jpg" alt="Today's Image" style="max-width:100%;">
 </body>
 </html>
