@@ -3,7 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-
+  schedule:
+    - cron: '0 17 * * *'
 
 
 permissions:
@@ -16,16 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Dispatch event
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.rest.repos.createDispatchEvent({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              event_type: 'custom-event',
-            })
-            
       - uses: actions/checkout@v4
 
       - name: Clone external repository
