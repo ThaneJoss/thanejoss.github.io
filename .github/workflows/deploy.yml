@@ -19,17 +19,13 @@ jobs:
       - name: Dispatch event
         uses: actions/github-script@v5
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.repos.createDispatchEvent({
+            github.rest.repos.createDispatchEvent({
               owner: context.repo.owner,
               repo: context.repo.repo,
               event_type: 'custom-event',
-              client_payload: {
-                message: 'Hello World!'
-              }
             })
-
+            
       - uses: actions/checkout@v4
 
       - name: Clone external repository
