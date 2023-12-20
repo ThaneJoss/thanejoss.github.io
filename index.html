@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Display</title>
+    <style>
+        /* 添加全局字体和背景颜色 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* 图片容器样式，确保图片居中且不超出屏幕大小 */
+        .image-container {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 80%;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        /* 图片样式 */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 图片容器悬浮效果 */
+        .image-container:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        /* 添加一些响应式设计，适应不同的屏幕大小 */
+        @media (max-width: 700px) {
+            .image-container {
+                width: 95%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Today's Image</h1>
-    <img src="today.jpg" alt="Today's Image" style="max-width:100%;">
+    <div class="image-container">
+        <img src="today.jpg" alt="Today's Image">
+    </div>
 </body>
 </html>
