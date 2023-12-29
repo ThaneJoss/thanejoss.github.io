@@ -1,0 +1,83 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #f7f7f7;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#gallery {
+  display: flex;
+  height: 100%;
+}
+#thumbnails {
+  width: 20%;
+  overflow-y: auto;
+  background: #fff;
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+#thumbnails img {
+  width: calc(100% - 20px);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#thumbnails img:hover,
+.selected-thumbnail {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.selected-thumbnail {
+  border: 2px solid blue;
+}
+#main-image {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+#main-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+.thumbnail-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.thumbnail-date {
+  margin-top: 5px;
+  font-size: 1em; /* 调整字体大小为1em或更大 */
+  color: #333; /* 深色字体 */
+  font-weight: bold; /* 加粗字体 */
+  padding: 5px;
+  background-color: #ffffff; /* 轻微背景色 */
+  border-radius: 4px; /* 圆角边框 */
+  display: inline-block; /* 使得背景色紧贴文字 */
+  margin: 10px 0; /* 调整上下间距 */
+}
+#download-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#download-icon a {
+  display: inline-block;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+#download-icon img {
+  width: 32px;
+  height: auto;
+}
