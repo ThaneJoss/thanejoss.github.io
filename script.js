@@ -51,7 +51,7 @@ function buildImagePath(filename) {
 
 async function generateDateThumbnails() {
     const endDate = new Date();
-    const startDate = new Date(2024, 1, 1); // 注意月份是从0开始的，11代表12月
+    const startDate = new Date(2024, 2, 1); // 注意月份是从0开始的，11代表12月
     let currentDate = new Date(endDate.getTime());
   
     currentDate.setDate(currentDate.getDate() - 1);
